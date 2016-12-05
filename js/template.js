@@ -80,7 +80,11 @@ var formatNPSUrl = function(t, url){
 };
 
 var boardButtonCallback = function(t){
-  window.location = 'https://trello.karting.arcturus.uberspace.de/board/' + t.args[0].context.board;
+  return t.get('board', 'shared', 'group_by')
+  .then(function(group_by) {
+    group_by = group_by || 'list';
+    window.location = 'https://trello.karting.arcturus.uberspace.de/board/' + t.args[0].context.board + '?group_by=' + group_by;
+  });
 };
 
 var cardButtonCallback = function(t){
