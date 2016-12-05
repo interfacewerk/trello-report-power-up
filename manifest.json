@@ -1,7 +1,7 @@
 {
-  "name": "Business Report",
+  "name": "Business Reports",
   "description": "",
-  "details": "Business Report turns any Trello board into a nice project status report in PDF format.",
+  "details": "Business Reports turns any Trello board into a nice project status report in PDF format.",
   "icon": {
     "url": "./images/logo.png"
   },
